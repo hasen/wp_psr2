@@ -1,0 +1,37 @@
+<?php
+
+// WordPress のためのデータベース名
+define("DB_NAME", "");
+// MySQL データベースのユーザー名
+define("DB_USER", "");
+// MySQL データベースのパスワード
+define("DB_PASSWORD", "");
+// MySQL のホスト名
+define("DB_HOST", "");
+// データベースのテーブルを作成する際のデータベースの文字セット
+define("DB_CHARSET", "utf8");
+// データベースの照合順序 (ほとんどの場合変更する必要はありません)
+define("DB_COLLATE", "");
+
+// https://api.wordpress.org/secret-key/1.1/
+define("AUTH_KEY",         "");
+define("SECURE_AUTH_KEY",  "");
+define("LOGGED_IN_KEY",    "");
+define("NONCE_KEY",        "");
+define("AUTH_SALT",        "");
+define("SECURE_AUTH_SALT", "");
+define("LOGGED_IN_SALT",   "");
+define("NONCE_SALT",       "");
+
+$table_prefix  = "wp_";
+
+// デバグモード
+define("WP_DEBUG", true);
+
+// Absolute path to the WordPress directory.
+if (!defined("ABSPATH") === true) {
+    define("ABSPATH", dirname(__FILE__) . "/");
+}
+
+// Sets up WordPress vars and included files.
+require_once ABSPATH . "wp-settings.php";
